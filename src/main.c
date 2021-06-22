@@ -67,6 +67,7 @@ uint16_t find_segment(void *mmaped_elf, int fsize){
 
 int main(int argc, char *argv[]) {
   int fsize, target_fd;
+	setbuf(stdout, NULL);
   void *mmaped_elf;
   printf("FILENAME :: %s\n", argv[1]);
   target_fd  = map_elf(argv[1], &mmaped_elf, &fsize);
